@@ -1,2 +1,3 @@
 # labVI
-Repositório para a disciplina de Laboratório de Banco de Dados VI - 6º semestre - FATEC
+Aluna: Bruna Maria da Silva Gonçalves
+RA: 1460481621012
