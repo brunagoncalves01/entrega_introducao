@@ -1,14 +1,18 @@
-plugins{
-	id 'java'
-	id 'application'
+
+plugins {
+    id 'java'
+    id 'application'
 }
 
-mainClassName = 'app.Aplicacao'
+repositories {
+    jcenter()
+}
 
-sourceSets{
-	main{
-		java{
-			srcDirs 'src/main'
-		}
-	}
+dependencies {
+    implementation 'com.google.guava:guava:29.0-jre'
+    testImplementation 'junit:junit:4.13'
+}
+
+application {
+    mainClassName = 'app.App'
 }
