@@ -4,23 +4,15 @@ plugins {
     id 'application'
 }
 
-sourceSets {
-	main{
-		java{
-			srcDirs 'src/main'
-		}
-	}
+
+dependencies {
+    testCompileOnly 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    compile 'joda-time:joda-time:2.10.6'
 }
 
 repositories {
     jcenter()
-}
-
-dependencies {
-    implementation 'com.google.guava:guava:29.0-jre'
-    testCompileOnly 'org.junit.jupiter:junit-jupiter-api:5.3.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
-    compile 'joda-time:joda-time:2.10.6'
 }
 
 test{

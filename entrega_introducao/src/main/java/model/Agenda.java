@@ -18,22 +18,26 @@ public class Agenda implements Agendamento{
 	public Evento agendar(Evento e) {
 		
 		Evento evento = new Evento();
-		//evento = e;
-		//evento.setId(01);
-        //evento.setNome("teste");
-        //evento.setDataInicial("09/18/2020 01:00");
-        //evento.setDataFinal("09/19/2020 01:00");*/
+		evento = e;
+		evento.setId(01);
+        evento.setNome("teste");
+        evento.setDataInicial("09/18/2020 01:00");
+        evento.setDataFinal("09/19/2020 01:00");
         eventos.add(evento);
         return evento;
         
 	}
 	
-	public int retornaTempoParaEvento() {
-		String nome = "teste";
-		int cont = 0;
+	public String retornaTempoParaEvento(int i) {
+		
+		int id = i;
+		i = 01;
+		//String nome = n;
+		//nome = "teste";
+		String resultado = " ";
 		
 		for (Evento evento : eventos) {
-			if (evento.getNome().equals(nome)) {
+			if (evento.getId() == 01) {
 				
 				String dataInicial = evento.getDataInicial();
 		    	String dataFinal = evento.getDataFinal();
@@ -53,12 +57,13 @@ public class Agenda implements Agendamento{
 		    		System.out.print(Days.daysBetween(dt1, dt2).getDays() + " days, ");
 		    		System.out.print(Hours.hoursBetween(dt1, dt2).getHours() + " hours, ");
 		    		System.out.print(Minutes.minutesBetween(dt1, dt2).getMinutes() + " minutes");
-		    		cont = 1;
+		    		resultado = "" + Days.daysBetween(dt1, dt2).getDays() + " " + Hours.hoursBetween(dt1, dt2).getHours() + " " + Minutes.minutesBetween(dt1, dt2).getMinutes();
+		    	
 		    	} catch (Exception e){
 		    		e.printStackTrace();
 		    	}
 			}
 		}
-		return cont;
+		return resultado;
 	}
 }
